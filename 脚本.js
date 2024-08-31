@@ -168,7 +168,7 @@ function getCsrf() {
 function reportDynamic(uid, dyid) {
     const csrf = getCsrf();
     //const url = `https://api.bilibili.com/x/v2/reply/report?type=1&oid=${oid}&rpid=${rpid}&reason=1&content=&add_blacklist=false&ordering=heat&gaia_source=main_web&csrf=${csrf}`;
-    const url = `https://api.bilibili.com/x/v2/reply/report?accused_uid=${uid}&dynamic_id=${dyid}&reason_type=9&reason_desc=null&csrf=${csrf}`;
+    const url = `https://api.bilibili.com/x/dynamic/feed/dynamic_report/add?accused_uid=${uid}&dynamic_id=${dyid}&reason_type=9&reason_desc=null&csrf=${csrf}`;
 
 
     GM.xmlHttpRequest({
